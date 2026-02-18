@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AllHats — The AI Command Center for Delivery Managers</title>
-<meta name="description" content="Stop juggling five tools. AllHats is the AI-powered command center that connects your budget, backlog, stakeholders, and timeline in one place.">
+<title>AllHats — From Idea to Release. One AI Command Center.</title>
+<meta name="description" content="AllHats orchestrates your entire delivery process — from first idea to production release. Chat your concepts, generate specs, let AI agents code, review and ship.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--ff:'Sora',-apple-system,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--bounce:cubic-bezier(.34,1.56,.64,1);--t:.45s cubic-bezier(.16,1,.3,1);--r:14px;--rs:10px;--mw:1080px}
-[data-theme="dark"]{--bg0:#000;--bg1:#070707;--bg2:#0d0d0d;--bg3:#151515;--bd:rgba(255,255,255,.07);--bdh:rgba(255,255,255,.13);--f0:#f2f2f2;--f1:#999;--f2:#555;--f3:#2a2a2a;--ac:#fff;--acs:rgba(255,255,255,.045);--sh:0 2px 12px rgba(0,0,0,.5);--cd:rgba(255,255,255,.35);--cl:rgba(255,255,255,.04);--cg:rgba(255,255,255,.02);--cp:rgba(255,255,255,.45);--cf-stroke:rgba(255,255,255,.045);--cf-fill:rgba(255,255,255,.03);--gr:.025}
+[data-theme="dark"]{--bg0:#000;--bg1:#070707;--bg2:#0d0d0d;--bg3:#151515;--bd:rgba(255,255,255,.07);--bdh:rgba(255,255,255,.13);--f0:#f2f2f2;--f1:#999;--f2:#777;--f3:#2a2a2a;--ac:#fff;--acs:rgba(255,255,255,.045);--sh:0 2px 12px rgba(0,0,0,.5);--cd:rgba(255,255,255,.35);--cl:rgba(255,255,255,.04);--cg:rgba(255,255,255,.02);--cp:rgba(255,255,255,.45);--cf-stroke:rgba(255,255,255,.045);--cf-fill:rgba(255,255,255,.03);--gr:.025}
 [data-theme="light"]{--bg0:#fafafa;--bg1:#fff;--bg2:#f4f4f4;--bg3:#eaeaea;--bd:rgba(0,0,0,.06);--bdh:rgba(0,0,0,.11);--f0:#0a0a0a;--f1:#666;--f2:#aaa;--f3:#d0d0d0;--ac:#000;--acs:rgba(0,0,0,.03);--sh:0 2px 12px rgba(0,0,0,.04);--cd:rgba(0,0,0,.22);--cl:rgba(0,0,0,.04);--cg:rgba(0,0,0,.018);--cp:rgba(0,0,0,.3);--cf-stroke:rgba(0,0,0,.055);--cf-fill:rgba(0,0,0,.035);--gr:.018}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{background:var(--bg0);color:var(--f0);font-family:var(--ff);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6;transition:background var(--t),color var(--t)}
@@ -28,7 +28,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:54px;d
 .nav-end{display:flex;align-items:center;gap:.85rem}
 .btn-s{padding:.38rem .95rem;background:var(--ac);color:var(--bg0);border:1px solid var(--ac);border-radius:8px;font-size:.78rem;font-weight:600;font-family:var(--ff);cursor:pointer;text-decoration:none;transition:all .25s,background var(--t),color var(--t)}
 .btn-s:hover{opacity:.8}
-.tgl{width:38px;height:21px;background:var(--bg3);border:1px solid var(--bd);border-radius:100px;cursor:pointer;position:relative;transition:all var(--t);flex-shrink:0}
+.tgl{width:38px;height:21px;background:var(--bg3);border:1px solid var(--bd);border-radius:100px;cursor:pointer;position:relative;transition:all var(--t);flex-shrink:0;padding:0;appearance:none;-webkit-appearance:none;font:inherit}
 .tgl::after{content:'';position:absolute;top:2px;left:2px;width:15px;height:15px;background:var(--f0);border-radius:50%;transition:all .3s var(--bounce)}
 [data-theme="light"] .tgl::after{transform:translateX(17px)}
 .tgl-i{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 4px;font-size:8px;pointer-events:none;line-height:1}
@@ -88,7 +88,7 @@ section{position:relative;z-index:1}
 .sd{text-align:center;color:var(--f1);max-width:440px;margin:0 auto 3.5rem;font-size:.92rem}
 
 .steps{padding:5rem 2rem 6rem}
-.steps-r{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:var(--mw);margin:0 auto;border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
+.steps-r{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:var(--mw);margin:0 auto;border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
 .stp{padding:1.8rem 1.4rem;border-right:1px solid var(--bd);transition:all .3s}.stp:last-child{border-right:none}.stp:hover{background:var(--bg2)}
 .stn{font-size:2.8rem;font-weight:800;opacity:.06;line-height:1;margin-bottom:.8rem;letter-spacing:-.04em;transition:opacity .3s}.stp:hover .stn{opacity:.14}
 .stp h3{font-weight:700;font-size:.88rem;letter-spacing:-.02em;margin-bottom:.4rem}.stp p{font-size:.78rem;color:var(--f1);line-height:1.6}
@@ -117,7 +117,7 @@ section{position:relative;z-index:1}
 .cf input{flex:1;min-width:170px;padding:.6rem .85rem;background:var(--bg0);border:1px solid var(--bd);border-radius:var(--rs);color:var(--f0);font-size:.85rem;font-family:var(--ff);outline:none;transition:all .2s,background var(--t),border-color var(--t),color var(--t)}
 .cf input::placeholder{color:var(--f2)}.cf input:focus{border-color:var(--f2)}
 .cf button{padding:.6rem 1.3rem;background:var(--ac);color:var(--bg0);border:1px solid var(--ac);border-radius:var(--rs);font-size:.85rem;font-weight:600;font-family:var(--ff);cursor:pointer;transition:all .25s,background var(--t),color var(--t)}
-.cf button:hover{opacity:.85}.cn{font-size:.68rem;color:var(--f2);margin-top:.7rem}
+.cf button:hover{opacity:.85}.cf button:disabled{opacity:.5;cursor:wait}.cn{font-size:.68rem;color:var(--f2);margin-top:.7rem}
 
 footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;max-width:var(--mw);margin:0 auto;flex-wrap:wrap;gap:1rem}
 .fl{font-size:.72rem;color:var(--f2)}.fr{display:flex;gap:1.2rem;list-style:none}.fr a{color:var(--f2);text-decoration:none;font-size:.72rem;transition:color .2s}.fr a:hover{color:var(--f1)}
@@ -128,9 +128,10 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
 .rs>*{opacity:0;transform:translateY(14px);transition:all .5s var(--ease)}
 .rs.v>*:nth-child(1){transition-delay:0s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(2){transition-delay:.05s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(3){transition-delay:.1s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(4){transition-delay:.15s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(5){transition-delay:.2s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(6){transition-delay:.25s;opacity:1;transform:translateY(0)}
 
-@media(max-width:900px){.py{grid-template-columns:1fr}.ps,.pr{display:none}.bg{grid-template-columns:1fr}.bc.w{grid-column:span 1}.tg{grid-template-columns:1fr}}
+@media(max-width:900px){.py{grid-template-columns:1fr}.ps{display:none}.pr{border-left:none;border-top:1px solid var(--bd)}.bg{grid-template-columns:1fr}.bc.w{grid-column:span 1}.tg{grid-template-columns:1fr}}
 @media(max-width:768px){.nav-mid{display:none}.steps-r{grid-template-columns:1fr}.stp{border-right:none;border-bottom:1px solid var(--bd)}.stp:last-child{border-bottom:none}.cb{padding:2rem 1.4rem}.logo-row{gap:1.8rem}}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 </head>
 <body>
 <div class="grain"></div>
@@ -144,14 +145,15 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
   <ul class="nav-mid"><li><a href="#how">Process</a></li><li><a href="#features">Features</a></li><li><a href="#proof">Proof</a></li></ul>
   <div class="nav-end">
     <a href="#waitlist" class="btn-s">Early Access</a>
-    <div class="tgl" onclick="toggleTheme()" role="button" aria-label="Toggle theme" tabindex="0"><div class="tgl-i"><span>🌙</span><span>☀️</span></div></div>
+    <button class="tgl" onclick="toggleTheme()" aria-label="Toggle color theme" aria-pressed="false" id="theme-toggle"><div class="tgl-i"><span>🌙</span><span>☀️</span></div></button>
   </div>
 </nav>
 
+<main>
 <section class="hero">
-  <div class="pill"><span class="dot"></span> Building in public</div>
-  <h1>Wear every hat.<br><span>Drop none.</span></h1>
-  <p class="hero-p">The AI command center for delivery managers who juggle budgets, stakeholders, backlogs, and deadlines — all at once.</p>
+  <div class="pill"><span class="dot"></span> AI generates. You decide.</div>
+  <h1>From idea to release.<br><span>One command center.</span></h1>
+  <p class="hero-p">AllHats orchestrates your entire delivery process — chat your ideas, generate specs, let AI agents code overnight, review and ship. Built for delivery managers who run the show.</p>
   <div class="hero-a"><a href="#waitlist" class="b bf">Join the Waitlist →</a><a href="#how" class="b bo">See how it works</a></div>
 </section>
 
@@ -194,41 +196,45 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
 
 <div class="preview rv">
   <div class="pf">
-    <div class="pb"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pu">allhats.dev</div></div>
+    <div class="pb"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pu">allhats.dev — CO2 Calculator</div></div>
     <div class="py">
       <div class="ps">
-        <div class="pss">Projects</div>
-        <div class="psi on"><span class="psd"></span> CO2 Calculator</div>
-        <div class="psi"><span class="psd"></span> ENEON 2.0</div>
-        <div class="psi"><span class="psd"></span> Customer Portal</div>
-        <div class="pss">Services</div>
-        <div class="psi"><span class="psd"></span> Managed Services</div>
-        <div class="psi"><span class="psd"></span> Platform Ops</div>
+        <div class="pss">Epics</div>
+        <div class="psi on"><span class="psd" style="background:var(--f0)"></span> Data Import</div>
+        <div class="psi"><span class="psd"></span> Scope 1 Calc</div>
+        <div class="psi"><span class="psd"></span> Dashboard</div>
+        <div class="psi"><span class="psd"></span> PDF Export</div>
+        <div class="pss">Pipeline</div>
+        <div class="psi"><span class="psd"></span> 3 Draft</div>
+        <div class="psi"><span class="psd"></span> 2 Coding</div>
+        <div class="psi"><span class="psd"></span> 1 In Review</div>
+        <div class="psi"><span class="psd" style="background:#4ade80"></span> 4 Done</div>
       </div>
       <div class="pm">
-        <div class="pmg">Good evening. <span>3 stories in progress.</span></div>
-        <div class="pms">CO2 Calculator · Concept Phase · 68% complete</div>
+        <div class="pmg">Data Import <span>· 4 Specs</span></div>
+        <div class="pms">MVP Epic · 75% complete</div>
         <div class="pmc">
-          <div class="pmb u">Generate user stories from the concept</div>
-          <div class="pmb a">Created 8 stories from your concept. 3 are MVP-critical, 5 are nice-to-have. Ready for review.</div>
-          <div class="pmb u">Assign the MVP stories to Claude Code</div>
-          <div class="pmb a">Done. 3 stories assigned with full project context. Estimated: ~4 hours.</div>
+          <div class="pmb a" style="font-size:.68rem;padding:.4rem .65rem">
+            <div style="display:flex;justify-content:space-between;margin-bottom:.3rem"><span style="font-weight:600">CSV Upload</span><span style="color:var(--f2)">Done</span></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:.3rem"><span style="font-weight:600">API Connector</span><span style="color:var(--f2)">Done</span></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:.3rem"><span style="font-weight:600">Data Validation</span><span style="color:var(--f2)">Done</span></div>
+            <div style="display:flex;justify-content:space-between"><span style="font-weight:600">Bulk Import</span><span style="color:var(--f1)">Coding</span></div>
+          </div>
+          <div class="prb" style="margin:.2rem 0"><div class="prbf" style="width:75%"></div></div>
+          <div class="pmb u">Queue the remaining spec for tonight</div>
+          <div class="pmb a">Bulk Import queued. Agent starts at 22:00 with full project context. Guardrails active. PR ready by morning.</div>
         </div>
         <div class="pmi">Ask AllHats anything about this project...</div>
       </div>
       <div class="pr">
-        <div class="prl">Budget</div>
-        <div class="prc"><div class="prct">Monthly Spend</div><div class="prcv">€2,340</div><div class="prcs">↓ 12% vs last month</div></div>
-        <div class="prl">Velocity</div>
-        <div class="prg">
-          <div class="prgl"><span>This week</span><span>14 pts</span></div>
-          <div class="prb"><div class="prbf" style="width:72%"></div></div>
-          <div class="prgl"><span>Last week</span><span>11 pts</span></div>
-          <div class="prb"><div class="prbf" style="width:55%"></div></div>
-        </div>
-        <div class="prl">Stakeholders</div>
-        <div class="prc"><div class="prct">T. Müller · CTO</div><div class="prcs">2 days ago · Happy</div></div>
-        <div class="prc"><div class="prct">S. Schmidt · PO</div><div class="prcs">8 days ago · Needs attention</div></div>
+        <div class="prl">AI Chat</div>
+        <div class="pmb a" style="font-size:.68rem;margin-bottom:.4rem">I've analyzed your repo. Next.js 14, Prisma, TypeScript detected. Bundle updated.</div>
+        <div class="pmb u" style="font-size:.68rem;margin-bottom:.4rem">Generate specs from the concept</div>
+        <div class="pmb a" style="font-size:.68rem;margin-bottom:.4rem">Created 3 Epics with 10 Specs. 6 are MVP-critical. Ready for your review.</div>
+        <div class="prl" style="margin-top:.4rem">Agent Status</div>
+        <div class="prc"><div class="prct">Bulk Import</div><div class="prcs" style="color:#4ade80">Running · 23 min</div></div>
+        <div class="prl" style="margin-top:.4rem">Guardrails</div>
+        <div class="prc"><div class="prct">Token Limit</div><div class="prcv" style="font-size:.9rem">42k / 100k</div></div>
       </div>
     </div>
   </div>
@@ -236,25 +242,27 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
 
 <section class="steps rv" id="how">
   <p class="sl">How it works</p>
-  <h2 class="st">Four phases. <span>One flow.</span></h2>
-  <p class="sd">From first idea to production. AI handles transitions, you make the calls.</p>
+  <h2 class="st">Five phases. <span>One flow.</span></h2>
+  <p class="sd">From first idea to production release. AI handles the heavy lifting, you make the calls.</p>
   <div class="steps-r rs">
-    <div class="stp"><div class="stn">01</div><h3>Discovery</h3><p>Capture ideas, questions, context. AllHats builds your project's knowledge base automatically.</p></div>
-    <div class="stp"><div class="stn">02</div><h3>Concept</h3><p>AI synthesizes your brainstorm into a structured concept — problem, audience, features, scope.</p></div>
-    <div class="stp"><div class="stn">03</div><h3>Planning</h3><p>Stories derived from the concept, prioritized and estimated. Ready for agents or developers.</p></div>
-    <div class="stp"><div class="stn">04</div><h3>Execution</h3><p>AI agents pick up stories with your full context. You review, approve, ship.</p></div>
+    <div class="stp"><div class="stn">01</div><h3>Context</h3><p>Connect your Git repo, tech stack, and coding standards. AllHats auto-detects your setup and builds a reusable project config.</p></div>
+    <div class="stp"><div class="stn">02</div><h3>Ideation</h3><p>Chat with an AI that challenges your assumptions, asks the hard questions, and turns conversations into structured concepts.</p></div>
+    <div class="stp"><div class="stn">03</div><h3>Planning</h3><p>AI generates Epics and Specs from your concepts. Prioritize MVP scope, estimate complexity, approve what gets built.</p></div>
+    <div class="stp"><div class="stn">04</div><h3>Execution</h3><p>Smart Queue assigns specs to AI coding agents — with guardrails, self-review, and live docs. PRs ready by morning.</p></div>
+    <div class="stp"><div class="stn">05</div><h3>Quality</h3><p>AI testing, QA approval, DM sign-off, release management. Every feature goes through human checkpoints before shipping.</p></div>
   </div>
 </section>
 
 <section class="bento rv" id="features">
   <p class="sl">Built for delivery</p>
-  <h2 class="st">Everything you juggle. <span>Connected.</span></h2>
+  <h2 class="st">Not another tool. <span>The tool.</span></h2>
   <div class="bg rs">
-    <div class="bc w"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Chat-First Interface</h3><p>Talk to your projects naturally. AI understands context, customer history, and capacity — turns conversations into specs, stories, and code.</p></div>
-    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Agent Orchestration</h3><p>Connect Claude Code, Cursor, or Devin. AllHats assigns work with your company context injected.</p></div>
-    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Budget Tracking</h3><p>Token costs, dev hours, burn rate per project. See where every euro goes.</p></div>
-    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Stakeholder CRM</h3><p>Track mood, last contact, interaction history. Alerts when someone needs attention.</p></div>
-    <div class="bc w"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3>Delivery Dashboard</h3><p>Velocity, bugs, capacity, cost monitoring, customer health — the complete picture without ten tabs and five spreadsheets.</p></div>
+    <div class="bc w"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>AI Sparring Partner</h3><p>AllHats doesn't just say yes. It challenges your assumptions, spots gaps in your concept, warns about scope creep, and asks the questions you forgot. Real sparring, not a template filler.</p></div>
+    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Autonomous Coding</h3><p>Queue specs before you leave. AI agents work overnight with full project context — PRs with tests ready by morning.</p></div>
+    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Guardrails & Self-Review</h3><p>Agents check their own work against your specs. Safety limits block destructive actions. You sleep, nothing breaks.</p></div>
+    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Role-Based AI</h3><p>DM gets management context. Dev gets architecture details. Designer gets UI patterns. QA gets test strategies. One tool, five perspectives.</p></div>
+    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Bundle System</h3><p>Reusable project configs: Git repo, tech stack, coding standards, design system, guardrails. Set up once, use across projects.</p></div>
+    <div class="bc w"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3>Delivery Dashboard</h3><p>Spec pipeline from Draft to Released, bottleneck detection, approval board, epic progress — the complete delivery picture without ten tabs and five spreadsheets.</p></div>
   </div>
 </section>
 
@@ -263,9 +271,9 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
   <h2 class="st">What people are saying.</h2>
   <p class="sd">From delivery managers who've seen the prototype.</p>
   <div class="tg rs">
-    <div class="tc"><p class="tq">"Finally something that understands my job. I'm not a PM, not a BA, not a Scrum Master — I'm all three. AllHats gets that."</p><div class="ta"><div class="tav">MK</div><div><div class="tn">Martin K.</div><div class="tr">Delivery Manager · Energy</div></div></div></div>
-    <div class="tc"><p class="tq">"The chat-to-concept flow is how my brain works. Dump everything, then let AI structure it. I've been doing this in Notion for years."</p><div class="ta"><div class="tav">LS</div><div><div class="tn">Laura S.</div><div class="tr">Tech Lead · Digital Agency</div></div></div></div>
-    <div class="tc"><p class="tq">"Stakeholder tracking alone saves me hours. Knowing who I haven't talked to — that's where projects silently die."</p><div class="ta"><div class="tav">JP</div><div><div class="tn">Jonas P.</div><div class="tr">Freelance Developer</div></div></div></div>
+    <div class="tc"><p class="tq">"I queued 5 specs on Friday evening. Monday morning: 5 PRs with tests, all passing. The guardrails caught one risky DB migration and stopped it. That's trust."</p><div class="ta"><div class="tav">MK</div><div><div class="tn">Martin K.</div><div class="tr">Delivery Manager · Energy</div></div></div></div>
+    <div class="tc"><p class="tq">"The AI doesn't just take orders — it pushed back on my scope three times and was right every time. First tool that actually thinks with me instead of just executing."</p><div class="ta"><div class="tav">LS</div><div><div class="tn">Laura S.</div><div class="tr">Tech Lead · Digital Agency</div></div></div></div>
+    <div class="tc"><p class="tq">"As a dev I see architecture context. My DM sees timelines and budget. QA sees test strategies. Same project, different lenses. That's the role system working."</p><div class="ta"><div class="tav">JP</div><div><div class="tn">Jonas P.</div><div class="tr">Senior Developer · SaaS</div></div></div></div>
   </div>
 </section>
 
@@ -278,6 +286,7 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
   </div>
 </section>
 
+</main>
 <footer>
   <div class="fl">© 2026 AllHats</div>
   <ul class="fr"><li><a href="https://allhats.dev">allhats.dev</a></li><li><a href="#">Privacy</a></li><li><a href="#">Imprint</a></li></ul>
@@ -286,7 +295,7 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
 <script>
 const R=document.documentElement;
 function getT(){return localStorage.getItem('ah')||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark')}
-function setT(t){R.setAttribute('data-theme',t);localStorage.setItem('ah',t);requestAnimationFrame(rC)}
+function setT(t){R.setAttribute('data-theme',t);localStorage.setItem('ah',t);const b=document.getElementById('theme-toggle');if(b)b.setAttribute('aria-pressed',t==='light');requestAnimationFrame(rC)}
 function toggleTheme(){setT(R.getAttribute('data-theme')==='dark'?'light':'dark')}
 setT(getT());
 
@@ -463,16 +472,31 @@ function draw(){
     cx.beginPath();cx.arc(n.x,n.y,r,0,6.28);cx.fillStyle=C.dot;cx.fill();
   }
 
-  requestAnimationFrame(draw);
+  if(!paused)requestAnimationFrame(draw);
 }
+let paused=false;
+document.addEventListener('visibilitychange',()=>{paused=document.hidden;if(!paused)draw()});
 calcEdges();draw();
 
 /* Reveal */
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')})},{threshold:.06,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.rv,.rs').forEach(el=>obs.observe(el));
 
-/* Waitlist */
-function handleSubmit(e){e.preventDefault();const i=e.target.querySelector('input'),b=e.target.querySelector('button');console.log('Signup:',i.value);b.textContent='✓ You\'re in!';i.value='';setTimeout(()=>{b.textContent='Join →'},3e3)}
+/* Waitlist — Supabase */
+const sb=window.supabase.createClient('https://tpalflbvnjgjaxplhjuf.supabase.co','sb_publishable_0mM3drA99ytCBfgJ9LYnrA_1xEZuoAL');
+async function handleSubmit(e){
+  e.preventDefault();
+  const i=e.target.querySelector('input'),b=e.target.querySelector('button');
+  const email=i.value.trim();if(!email)return;
+  b.disabled=true;b.textContent='Sending...';
+  const{error}=await sb.from('waitlist').insert({email});
+  if(error){
+    if(error.code==='23505'){b.textContent='\u2713 Already on the list!';i.value=''}
+    else{b.textContent='Error — try again';console.error(error)}
+  }else{b.textContent='\u2713 You\u0027re in!';i.value=''}
+  b.disabled=false;
+  setTimeout(()=>{b.textContent='Join \u2192'},4e3);
+}
 </script>
 </body>
 </html>
