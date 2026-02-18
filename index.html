@@ -95,7 +95,7 @@ section{position:relative;z-index:1}
 
 .bento{padding:5rem 2rem 6rem}
 .bg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:var(--mw);margin:0 auto;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
-.bc{background:var(--bg0);padding:1.5rem;transition:all .3s,background var(--t);display:flex;flex-direction:column;min-height:260px}.bc:hover{background:var(--bg2)}.bc.w{grid-column:span 2}
+.bc{background:var(--bg0);padding:1.5rem;transition:all .3s,background var(--t);display:flex;flex-direction:column;min-height:260px}.bc:hover{background:var(--bg2)}.bc.w{grid-column:span 2}.bc.fw{grid-column:1/-1}
 .bc-top{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:.6rem}
 .bc-ico{width:32px;height:32px;background:var(--acs);border:1px solid var(--bd);border-radius:8px;display:grid;place-items:center;flex-shrink:0}
 .bc-ico svg{width:16px;height:16px;stroke:var(--f1);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke var(--t)}
@@ -169,7 +169,7 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
 
 @media(max-width:900px){
 .py{grid-template-columns:1fr}.ps{display:none}.pr{border-left:none;border-top:1px solid var(--bd)}
-.bg{grid-template-columns:1fr}.bc.w{grid-column:span 1}
+.bg{grid-template-columns:1fr}.bc.w{grid-column:span 1}.bc.fw{grid-column:span 1}
 .tg{grid-template-columns:1fr}
 .roles-g{grid-template-columns:1fr}.roles-hero{grid-column:span 1;flex-direction:column;text-align:center;gap:1rem}
 }
@@ -391,7 +391,7 @@ footer{padding:1.2rem 1rem}.fl{font-size:.65rem}.fr a{font-size:.65rem}
         <div class="bc-layer"><span style="opacity:.5">&#128737;</span> Guardrails — src/ only, 100k tokens</div>
       </div>
     </div>
-    <div class="bc w">
+    <div class="bc fw">
       <div class="bc-top"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3>Delivery Dashboard</h3></div>
       <p>Spec pipeline, bottleneck detection, approval board — the complete picture without ten tabs.</p>
       <div class="bc-vis">
