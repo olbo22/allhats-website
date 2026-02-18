@@ -64,7 +64,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:54px;d
 .psi:hover{background:var(--acs);color:var(--f1)}.psi.on{background:var(--acs);color:var(--f0);font-weight:600}
 .psd{width:5px;height:5px;border-radius:50%;background:var(--f3);flex-shrink:0}
 .pss{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--f3);padding:.7rem .55rem .25rem}
-.pm{padding:1.1rem 1.4rem;display:flex;flex-direction:column;gap:.9rem}
+.pm{padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.9rem}
 .pmg{font-weight:700;font-size:1.1rem;letter-spacing:-.03em}.pmg span{font-weight:300;opacity:.35}
 .pms{font-size:.72rem;color:var(--f2)}
 .pmc{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:.45rem}
@@ -95,10 +95,31 @@ section{position:relative;z-index:1}
 
 .bento{padding:5rem 2rem 6rem}
 .bg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:var(--mw);margin:0 auto;background:var(--bd);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
-.bc{background:var(--bg0);padding:1.8rem 1.5rem;transition:all .3s,background var(--t);display:flex;flex-direction:column}.bc:hover{background:var(--bg2)}.bc.w{grid-column:span 2}
-.bc-ico{width:32px;height:32px;background:var(--acs);border:1px solid var(--bd);border-radius:8px;display:grid;place-items:center;margin-bottom:.9rem}
+.bc{background:var(--bg0);padding:1.5rem;transition:all .3s,background var(--t);display:flex;flex-direction:column;min-height:260px}.bc:hover{background:var(--bg2)}.bc.w{grid-column:span 2}
+.bc-top{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:.6rem}
+.bc-ico{width:32px;height:32px;background:var(--acs);border:1px solid var(--bd);border-radius:8px;display:grid;place-items:center;flex-shrink:0}
 .bc-ico svg{width:16px;height:16px;stroke:var(--f1);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke var(--t)}
-.bc h3{font-weight:700;font-size:.88rem;letter-spacing:-.02em;margin-bottom:.3rem}.bc p{font-size:.78rem;color:var(--f1);line-height:1.6}
+.bc h3{font-weight:700;font-size:.88rem;letter-spacing:-.02em;margin-top:.35rem}.bc p{font-size:.75rem;color:var(--f1);line-height:1.55;margin-bottom:.8rem}
+.bc-vis{margin-top:auto;border-radius:8px;overflow:hidden}
+.bc-chat{display:flex;flex-direction:column;gap:.35rem}
+.bc-msg{padding:.35rem .6rem;border-radius:8px;font-size:.65rem;max-width:85%;line-height:1.45}
+.bc-msg.ai{background:var(--acs);border:1px solid var(--bd);color:var(--f1);align-self:flex-start;border-bottom-left-radius:3px}
+.bc-msg.usr{background:var(--ac);color:var(--bg0);align-self:flex-end;border-bottom-right-radius:3px;font-weight:500}
+.bc-tl{display:flex;align-items:center;gap:.5rem;padding:.5rem .7rem;background:var(--acs);border:1px solid var(--bd);border-radius:8px}
+.bc-tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.bc-tl-line{flex:1;height:2px;background:var(--bd);position:relative}.bc-tl-line::after{content:'';position:absolute;left:0;top:0;height:100%;background:var(--f1);border-radius:2px}
+.bc-tl-t{font-size:.6rem;color:var(--f2);white-space:nowrap}
+.bc-guard{display:flex;flex-direction:column;gap:.3rem}
+.bc-guard-row{display:flex;align-items:center;gap:.5rem;padding:.3rem .6rem;background:var(--acs);border:1px solid var(--bd);border-radius:6px;font-size:.62rem;color:var(--f1)}
+.bc-guard-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.bc-guard-row span:last-child{margin-left:auto;font-weight:600;font-size:.58rem}
+.bc-roles{display:flex;gap:.35rem;flex-wrap:wrap}
+.bc-role{padding:.25rem .55rem;background:var(--acs);border:1px solid var(--bd);border-radius:6px;font-size:.6rem;font-weight:600;color:var(--f1);display:flex;align-items:center;gap:.3rem}
+.bc-role-dot{width:5px;height:5px;border-radius:50%}
+.bc-layers{display:flex;flex-direction:column;gap:0}
+.bc-layer{padding:.3rem .6rem;background:var(--acs);border:1px solid var(--bd);font-size:.6rem;color:var(--f1);display:flex;align-items:center;gap:.4rem}.bc-layer:first-child{border-radius:6px 6px 0 0}.bc-layer:last-child{border-radius:0 0 6px 6px}.bc-layer+.bc-layer{border-top:none}
+.bc-pipe{display:flex;gap:2px;height:22px;align-items:flex-end}
+.bc-pipe-seg{flex:1;border-radius:3px 3px 0 0;transition:height .5s var(--ease)}
 
 .test{padding:5rem 2rem 6rem}
 .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:var(--mw);margin:0 auto}
@@ -210,31 +231,42 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
         <div class="psi"><span class="psd"></span> 1 In Review</div>
         <div class="psi"><span class="psd" style="background:#4ade80"></span> 4 Done</div>
       </div>
-      <div class="pm">
-        <div class="pmg">Data Import <span>· 4 Specs</span></div>
-        <div class="pms">MVP Epic · 75% complete</div>
-        <div class="pmc">
-          <div class="pmb a" style="font-size:.68rem;padding:.4rem .65rem">
-            <div style="display:flex;justify-content:space-between;margin-bottom:.3rem"><span style="font-weight:600">CSV Upload</span><span style="color:var(--f2)">Done</span></div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:.3rem"><span style="font-weight:600">API Connector</span><span style="color:var(--f2)">Done</span></div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:.3rem"><span style="font-weight:600">Data Validation</span><span style="color:var(--f2)">Done</span></div>
-            <div style="display:flex;justify-content:space-between"><span style="font-weight:600">Bulk Import</span><span style="color:var(--f1)">Coding</span></div>
+      <div class="pm" style="gap:.55rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div class="pmg">Data Import <span>· 4 Specs · MVP</span></div><div style="font-size:.62rem;color:var(--f2)">75%</div></div>
+        <div class="prb" style="margin:0 0 .3rem"><div class="prbf" style="width:75%"></div></div>
+        <div style="display:flex;flex-direction:column;gap:.4rem">
+          <div style="display:flex;align-items:center;gap:.55rem;padding:.45rem .65rem;background:var(--acs);border:1px solid var(--bd);border-radius:8px">
+            <div style="width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-size:.72rem;font-weight:600">CSV Upload</div><div style="font-size:.6rem;color:var(--f2)">Feature · Size S</div></div>
+            <div style="font-size:.6rem;font-weight:600;color:#4ade80;padding:.15rem .45rem;background:rgba(74,222,128,.1);border-radius:4px">Done</div>
           </div>
-          <div class="prb" style="margin:.2rem 0"><div class="prbf" style="width:75%"></div></div>
-          <div class="pmb u">Queue the remaining spec for tonight</div>
-          <div class="pmb a">Bulk Import queued. Agent starts at 22:00 with full project context. Guardrails active. PR ready by morning.</div>
+          <div style="display:flex;align-items:center;gap:.55rem;padding:.45rem .65rem;background:var(--acs);border:1px solid var(--bd);border-radius:8px">
+            <div style="width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-size:.72rem;font-weight:600">API Connector</div><div style="font-size:.6rem;color:var(--f2)">Feature · Size M</div></div>
+            <div style="font-size:.6rem;font-weight:600;color:#4ade80;padding:.15rem .45rem;background:rgba(74,222,128,.1);border-radius:4px">Done</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.55rem;padding:.45rem .65rem;background:var(--acs);border:1px solid var(--bd);border-radius:8px">
+            <div style="width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-size:.72rem;font-weight:600">Data Validation</div><div style="font-size:.6rem;color:var(--f2)">Feature · Size S</div></div>
+            <div style="font-size:.6rem;font-weight:600;color:#4ade80;padding:.15rem .45rem;background:rgba(74,222,128,.1);border-radius:4px">Done</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.55rem;padding:.45rem .65rem;background:var(--acs);border:1px solid rgba(250,204,21,.2);border-radius:8px">
+            <div style="width:7px;height:7px;border-radius:50%;background:#facc15;flex-shrink:0;animation:blink 2.5s infinite"></div>
+            <div style="flex:1"><div style="font-size:.72rem;font-weight:600">Bulk Import</div><div style="font-size:.6rem;color:var(--f2)">Feature · Size L</div></div>
+            <div style="font-size:.6rem;font-weight:600;color:#facc15;padding:.15rem .45rem;background:rgba(250,204,21,.1);border-radius:4px">Coding</div>
+          </div>
         </div>
-        <div class="pmi">Ask AllHats anything about this project...</div>
       </div>
-      <div class="pr">
+      <div class="pr" style="gap:.5rem">
         <div class="prl">AI Chat</div>
-        <div class="pmb a" style="font-size:.68rem;margin-bottom:.4rem">I've analyzed your repo. Next.js 14, Prisma, TypeScript detected. Bundle updated.</div>
-        <div class="pmb u" style="font-size:.68rem;margin-bottom:.4rem">Generate specs from the concept</div>
-        <div class="pmb a" style="font-size:.68rem;margin-bottom:.4rem">Created 3 Epics with 10 Specs. 6 are MVP-critical. Ready for your review.</div>
-        <div class="prl" style="margin-top:.4rem">Agent Status</div>
-        <div class="prc"><div class="prct">Bulk Import</div><div class="prcs" style="color:#4ade80">Running · 23 min</div></div>
-        <div class="prl" style="margin-top:.4rem">Guardrails</div>
-        <div class="prc"><div class="prct">Token Limit</div><div class="prcv" style="font-size:.9rem">42k / 100k</div></div>
+        <div style="display:flex;flex-direction:column;gap:.3rem;flex:1">
+          <div class="pmb a" style="font-size:.65rem;padding:.35rem .55rem;margin-bottom:0">Repo analyzed. Next.js 14, Prisma, TypeScript. Bundle updated.</div>
+          <div class="pmb u" style="font-size:.65rem;padding:.35rem .55rem;margin-bottom:0">Generate specs from the concept</div>
+          <div class="pmb a" style="font-size:.65rem;padding:.35rem .55rem;margin-bottom:0">Created 3 Epics with 10 Specs. 6 are MVP.</div>
+          <div class="pmb u" style="font-size:.65rem;padding:.35rem .55rem;margin-bottom:0">Queue Bulk Import for tonight</div>
+          <div class="pmb a" style="font-size:.65rem;padding:.35rem .55rem;margin-bottom:0">Queued. Agent starts 22:00, guardrails active. PR ready by morning.</div>
+        </div>
+        <div class="pmi" style="font-size:.65rem;padding:.4rem .6rem;margin-top:auto">Ask AllHats...</div>
       </div>
     </div>
   </div>
@@ -257,12 +289,75 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
   <p class="sl">Built for delivery</p>
   <h2 class="st">Not another tool. <span>The tool.</span></h2>
   <div class="bg rs">
-    <div class="bc w"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>AI Sparring Partner</h3><p>AllHats doesn't just say yes. It challenges your assumptions, spots gaps in your concept, warns about scope creep, and asks the questions you forgot. Real sparring, not a template filler.</p></div>
-    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Autonomous Coding</h3><p>Queue specs before you leave. AI agents work overnight with full project context — PRs with tests ready by morning.</p></div>
-    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Guardrails & Self-Review</h3><p>Agents check their own work against your specs. Safety limits block destructive actions. You sleep, nothing breaks.</p></div>
-    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Role-Based AI</h3><p>DM gets management context. Dev gets architecture details. Designer gets UI patterns. QA gets test strategies. One tool, five perspectives.</p></div>
-    <div class="bc"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Bundle System</h3><p>Reusable project configs: Git repo, tech stack, coding standards, design system, guardrails. Set up once, use across projects.</p></div>
-    <div class="bc w"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3>Delivery Dashboard</h3><p>Spec pipeline from Draft to Released, bottleneck detection, approval board, epic progress — the complete delivery picture without ten tabs and five spreadsheets.</p></div>
+    <div class="bc w">
+      <div class="bc-top"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>AI Sparring Partner</h3></div>
+      <p>Challenges your assumptions, spots gaps, warns about scope creep. Real sparring, not a template filler.</p>
+      <div class="bc-vis bc-chat">
+        <div class="bc-msg usr">We need SSO, SAML, OAuth, and magic links for MVP</div>
+        <div class="bc-msg ai">That's 4 auth methods for an MVP. What's the actual user base? If it's internal-only, SSO alone covers 90% of cases.</div>
+        <div class="bc-msg usr">Good point. SSO + email/password for external.</div>
+        <div class="bc-msg ai">Agreed. I'll scope SSO + email/password. Parking magic links for v2.</div>
+      </div>
+    </div>
+    <div class="bc">
+      <div class="bc-top"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Autonomous Coding</h3></div>
+      <p>Queue specs before you leave. PRs with tests ready by morning.</p>
+      <div class="bc-vis" style="display:flex;flex-direction:column;gap:.4rem">
+        <div class="bc-tl"><div class="bc-tl-dot" style="background:var(--f2)"></div><div class="bc-tl-t">22:00 — Queued</div></div>
+        <div class="bc-tl"><div class="bc-tl-dot" style="background:#facc15"></div><div class="bc-tl-t">22:03 — Agent started</div></div>
+        <div class="bc-tl"><div class="bc-tl-dot" style="background:#facc15"></div><div class="bc-tl-t">23:47 — Self-review passed</div></div>
+        <div class="bc-tl"><div class="bc-tl-dot" style="background:#4ade80"></div><div class="bc-tl-t">23:48 — PR created, 12 tests</div></div>
+        <div class="bc-tl"><div class="bc-tl-dot" style="background:#4ade80"></div><div class="bc-tl-t" style="color:var(--f0);font-weight:600">06:00 — Ready for review</div></div>
+      </div>
+    </div>
+    <div class="bc">
+      <div class="bc-top"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Guardrails & Self-Review</h3></div>
+      <p>Safety limits protect your codebase. Agents check their own work. You sleep, nothing breaks.</p>
+      <div class="bc-vis bc-guard">
+        <div class="bc-guard-row"><div class="bc-guard-dot" style="background:#4ade80"></div> Token limit <span>42k / 100k</span></div>
+        <div class="bc-guard-row"><div class="bc-guard-dot" style="background:#4ade80"></div> Files changed <span>4 / 20</span></div>
+        <div class="bc-guard-row"><div class="bc-guard-dot" style="background:#4ade80"></div> Allowed paths <span>src/ only</span></div>
+        <div class="bc-guard-row"><div class="bc-guard-dot" style="background:#f87171"></div> DROP TABLE blocked <span>Stopped</span></div>
+        <div class="bc-guard-row"><div class="bc-guard-dot" style="background:#4ade80"></div> Self-review <span>3 fixes</span></div>
+      </div>
+    </div>
+    <div class="bc">
+      <div class="bc-top"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Role-Based AI</h3></div>
+      <p>Same project, different perspectives. Each role gets tailored AI context.</p>
+      <div class="bc-vis bc-roles">
+        <div class="bc-role"><div class="bc-role-dot" style="background:#818cf8"></div> DM — Timelines, risks, budget</div>
+        <div class="bc-role"><div class="bc-role-dot" style="background:#34d399"></div> Dev — Architecture, patterns</div>
+        <div class="bc-role"><div class="bc-role-dot" style="background:#f472b6"></div> Designer — UI, accessibility</div>
+        <div class="bc-role"><div class="bc-role-dot" style="background:#fbbf24"></div> QA — Test strategies, edge cases</div>
+        <div class="bc-role"><div class="bc-role-dot" style="background:#60a5fa"></div> RM — Deploy, rollback plans</div>
+      </div>
+    </div>
+    <div class="bc">
+      <div class="bc-top"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Bundle System</h3></div>
+      <p>Reusable project configs. Set up once, use across projects.</p>
+      <div class="bc-vis bc-layers">
+        <div class="bc-layer"><span style="opacity:.5">&#128279;</span> Git Repo — github.com/acme/app</div>
+        <div class="bc-layer"><span style="opacity:.5">&#9881;</span> Stack — Next.js 14, Prisma, TS</div>
+        <div class="bc-layer"><span style="opacity:.5">&#128209;</span> Standards — CLAUDE.md, ESLint</div>
+        <div class="bc-layer"><span style="opacity:.5">&#127912;</span> Design — Figma, shadcn/ui</div>
+        <div class="bc-layer"><span style="opacity:.5">&#128737;</span> Guardrails — src/ only, 100k tokens</div>
+      </div>
+    </div>
+    <div class="bc w">
+      <div class="bc-top"><div class="bc-ico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3>Delivery Dashboard</h3></div>
+      <p>Spec pipeline, bottleneck detection, approval board — the complete picture without ten tabs.</p>
+      <div class="bc-vis">
+        <div style="display:flex;gap:.5rem;align-items:flex-end;margin-bottom:.5rem">
+          <div style="flex:1;text-align:center"><div style="font-size:.58rem;color:var(--f2);margin-bottom:.25rem">Draft</div><div style="height:18px;background:var(--f2);border-radius:3px 3px 0 0;opacity:.5"></div></div>
+          <div style="flex:1;text-align:center"><div style="font-size:.58rem;color:var(--f2);margin-bottom:.25rem">Design</div><div style="height:10px;background:var(--f2);border-radius:3px 3px 0 0;opacity:.4"></div></div>
+          <div style="flex:1;text-align:center"><div style="font-size:.58rem;color:#facc15;margin-bottom:.25rem">Coding</div><div style="height:28px;background:#facc15;border-radius:3px 3px 0 0;opacity:.7"></div></div>
+          <div style="flex:1;text-align:center"><div style="font-size:.58rem;color:var(--f2);margin-bottom:.25rem">Review</div><div style="height:8px;background:var(--f2);border-radius:3px 3px 0 0;opacity:.35"></div></div>
+          <div style="flex:1;text-align:center"><div style="font-size:.58rem;color:var(--f2);margin-bottom:.25rem">QA</div><div style="height:12px;background:var(--f2);border-radius:3px 3px 0 0;opacity:.4"></div></div>
+          <div style="flex:1;text-align:center"><div style="font-size:.58rem;color:#4ade80;margin-bottom:.25rem">Done</div><div style="height:38px;background:#4ade80;border-radius:3px 3px 0 0;opacity:.6"></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.5rem;padding:.35rem .6rem;background:var(--acs);border:1px solid var(--bd);border-radius:6px;font-size:.6rem;color:var(--f1)"><div class="bc-guard-dot" style="background:#facc15"></div> Bottleneck: 6 specs stuck in Coding — consider parallel agents</div>
+      </div>
+    </div>
   </div>
 </section>
 
