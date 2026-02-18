@@ -121,6 +121,24 @@ section{position:relative;z-index:1}
 .bc-pipe{display:flex;gap:2px;height:22px;align-items:flex-end}
 .bc-pipe-seg{flex:1;border-radius:3px 3px 0 0;transition:height .5s var(--ease)}
 
+.roles{padding:5rem 2rem 6rem}
+.roles-g{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:var(--mw);margin:0 auto}
+.roles-hero{grid-column:span 2;padding:2rem 1.8rem;background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r);display:flex;align-items:center;gap:2rem}
+.roles-hero-t{flex:1}
+.roles-hero-t h3{font-weight:700;font-size:1.1rem;letter-spacing:-.02em;margin-bottom:.3rem}
+.roles-hero-t p{font-size:.82rem;color:var(--f1);line-height:1.6}
+.roles-hero-v{display:flex;gap:.4rem;flex-shrink:0}
+.roles-badge{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:.6rem;font-weight:700;color:var(--bg0);border:2px solid var(--bg1)}
+.rc{padding:1.5rem;background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r);transition:all .3s}.rc:hover{border-color:var(--bdh);background:var(--bg2)}
+.rc-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem}
+.rc-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.rc-tag{font-size:.58rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.15rem .45rem;border-radius:4px;margin-left:auto}
+.rc h3{font-weight:700;font-size:.85rem;letter-spacing:-.02em}
+.rc p{font-size:.75rem;color:var(--f1);line-height:1.55;margin-bottom:.7rem}
+.rc-actions{display:flex;flex-direction:column;gap:.25rem}
+.rc-act{font-size:.62rem;color:var(--f2);display:flex;align-items:center;gap:.35rem}
+.rc-act::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--f3);flex-shrink:0}
+
 .test{padding:5rem 2rem 6rem}
 .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:var(--mw);margin:0 auto}
 .tc{padding:1.5rem;background:var(--bg1);border:1px solid var(--bd);border-radius:var(--r);transition:all .3s}.tc:hover{border-color:var(--bdh);background:var(--bg2)}
@@ -149,8 +167,38 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
 .rs>*{opacity:0;transform:translateY(14px);transition:all .5s var(--ease)}
 .rs.v>*:nth-child(1){transition-delay:0s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(2){transition-delay:.05s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(3){transition-delay:.1s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(4){transition-delay:.15s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(5){transition-delay:.2s;opacity:1;transform:translateY(0)}.rs.v>*:nth-child(6){transition-delay:.25s;opacity:1;transform:translateY(0)}
 
-@media(max-width:900px){.py{grid-template-columns:1fr}.ps{display:none}.pr{border-left:none;border-top:1px solid var(--bd)}.bg{grid-template-columns:1fr}.bc.w{grid-column:span 1}.tg{grid-template-columns:1fr}}
-@media(max-width:768px){.nav-mid{display:none}.steps-r{grid-template-columns:1fr}.stp{border-right:none;border-bottom:1px solid var(--bd)}.stp:last-child{border-bottom:none}.cb{padding:2rem 1.4rem}.logo-row{gap:1.8rem}}
+@media(max-width:900px){
+.py{grid-template-columns:1fr}.ps{display:none}.pr{border-left:none;border-top:1px solid var(--bd)}
+.bg{grid-template-columns:1fr}.bc.w{grid-column:span 1}
+.tg{grid-template-columns:1fr}
+.roles-g{grid-template-columns:1fr}.roles-hero{grid-column:span 1;flex-direction:column;text-align:center;gap:1rem}
+}
+@media(max-width:768px){
+.nav-mid{display:none}
+nav{padding:0 1rem}
+.hero{padding:6rem 1.2rem 3rem}.hero h1{font-size:clamp(2rem,8vw,3.2rem)}.hero-p{font-size:.88rem;max-width:340px}
+.b{padding:.6rem 1.2rem;font-size:.82rem}
+.logos{padding:1.5rem 1rem 3rem}.logo-row{gap:1.2rem}.brand svg{height:14px}.brand span{font-size:.7rem}
+.preview{padding:0 .8rem 4rem}.pf{border-radius:12px}.pb{padding:.5rem .7rem}.pu{font-size:.6rem}
+.pm{padding:.8rem}.pmg{font-size:.9rem}
+.pmb{max-width:95%;font-size:.65rem;padding:.4rem .6rem}
+.pr{padding:.8rem}
+.steps{padding:3rem 1rem 4rem}.steps-r{grid-template-columns:1fr}.stp{border-right:none;border-bottom:1px solid var(--bd);padding:1.4rem 1.2rem}.stp:last-child{border-bottom:none}
+.bento{padding:3rem 1rem 4rem}.bc{min-height:auto;padding:1.2rem}
+.bc-msg{max-width:92%;font-size:.62rem}
+.bc-tl{padding:.4rem .55rem}.bc-tl-t{font-size:.58rem}
+.bc-guard-row{font-size:.6rem;padding:.25rem .5rem}
+.bc-role{font-size:.58rem;padding:.2rem .45rem}
+.bc-layer{font-size:.58rem;padding:.25rem .5rem}
+.roles{padding:3rem 1rem 4rem}.roles-g{gap:.7rem}
+.roles-hero{padding:1.4rem 1.2rem}.roles-hero-t h3{font-size:.95rem}
+.rc{padding:1.2rem}.rc p{font-size:.72rem}
+.test{padding:3rem 1rem 4rem}.tg{grid-template-columns:1fr;gap:.7rem}.tc{padding:1.2rem}
+.cta{padding:3rem 1rem 3rem}.cb{padding:1.6rem 1.2rem;border-radius:14px}
+.cf input{min-width:0}
+footer{padding:1.2rem 1rem}.fl{font-size:.65rem}.fr a{font-size:.65rem}
+.sl{font-size:.58rem}.st{font-size:clamp(1.5rem,5vw,2.2rem)}.sd{font-size:.82rem;max-width:340px}
+}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 </head>
@@ -163,7 +211,7 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
     <span class="logo-icon"><svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="11" fill="var(--ac)"/><path d="M24 10l-13 9 13 9 13-9-13-9z" fill="var(--bg0)" opacity=".25"/><path d="M24 15l-13 9 13 9 13-9-13-9z" fill="var(--bg0)" opacity=".5"/><path d="M24 20l-13 9 13 9 13-9-13-9z" fill="var(--bg0)"/></svg></span>
     <span class="logo-text">AllHats</span>
   </a>
-  <ul class="nav-mid"><li><a href="#how">Process</a></li><li><a href="#features">Features</a></li><li><a href="#proof">Proof</a></li></ul>
+  <ul class="nav-mid"><li><a href="#how">Process</a></li><li><a href="#features">Features</a></li><li><a href="#roles">Team</a></li><li><a href="#proof">Proof</a></li></ul>
   <div class="nav-end">
     <a href="#waitlist" class="btn-s">Early Access</a>
     <button class="tgl" onclick="toggleTheme()" aria-label="Toggle color theme" aria-pressed="false" id="theme-toggle"><div class="tgl-i"><span>🌙</span><span>☀️</span></div></button>
@@ -174,7 +222,7 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
 <section class="hero">
   <div class="pill"><span class="dot"></span> AI generates. You decide.</div>
   <h1>From idea to release.<br><span>One command center.</span></h1>
-  <p class="hero-p">AllHats orchestrates your entire delivery process — chat your ideas, generate specs, let AI agents code overnight, review and ship. Built for delivery managers who run the show.</p>
+  <p class="hero-p">AllHats orchestrates your entire delivery process — chat your ideas, generate specs, let AI agents code overnight, review and ship. Built for delivery managers and their team.</p>
   <div class="hero-a"><a href="#waitlist" class="b bf">Join the Waitlist →</a><a href="#how" class="b bo">See how it works</a></div>
 </section>
 
@@ -356,6 +404,63 @@ footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--bd);d
           <div style="flex:1;text-align:center"><div style="font-size:.58rem;color:#4ade80;margin-bottom:.25rem">Done</div><div style="height:38px;background:#4ade80;border-radius:3px 3px 0 0;opacity:.6"></div></div>
         </div>
         <div style="display:flex;align-items:center;gap:.5rem;padding:.35rem .6rem;background:var(--acs);border:1px solid var(--bd);border-radius:6px;font-size:.6rem;color:var(--f1)"><div class="bc-guard-dot" style="background:#facc15"></div> Bottleneck: 6 specs stuck in Coding — consider parallel agents</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roles rv" id="roles">
+  <p class="sl">Built for the whole team</p>
+  <h2 class="st">One tool. <span>Five perspectives.</span></h2>
+  <p class="sd">AllHats adapts to every role on the delivery team. Everyone sees the same project — through their own lens.</p>
+  <div class="roles-g rs">
+    <div class="roles-hero">
+      <div class="roles-hero-t">
+        <h3>Delivery Manager</h3>
+        <p>The primary user. You define the vision, chat with AI to refine concepts, approve specs, sign off on features, and keep the big picture in view. AllHats gives you the cockpit to steer everything from idea to release.</p>
+      </div>
+      <div class="roles-hero-v">
+        <div class="roles-badge" style="background:#818cf8">DM</div>
+        <div class="roles-badge" style="background:#34d399;margin-left:-.8rem">Dev</div>
+        <div class="roles-badge" style="background:#f472b6;margin-left:-.8rem">Des</div>
+        <div class="roles-badge" style="background:#fbbf24;margin-left:-.8rem">QA</div>
+        <div class="roles-badge" style="background:#60a5fa;margin-left:-.8rem">RM</div>
+      </div>
+    </div>
+    <div class="rc">
+      <div class="rc-head"><div class="rc-dot" style="background:#34d399"></div><h3>Developer</h3><div class="rc-tag" style="background:rgba(52,211,153,.1);color:#34d399">Technical</div></div>
+      <p>Add technical context to specs, trigger coding agents, review PRs, decide between AI rework or manual fix.</p>
+      <div class="rc-actions">
+        <div class="rc-act">Choose and update project bundles</div>
+        <div class="rc-act">Queue specs for autonomous coding</div>
+        <div class="rc-act">AI chat focused on architecture and patterns</div>
+      </div>
+    </div>
+    <div class="rc">
+      <div class="rc-head"><div class="rc-dot" style="background:#f472b6"></div><h3>Designer</h3><div class="rc-tag" style="background:rgba(244,114,182,.1);color:#f472b6">Creative</div></div>
+      <p>Review AI-generated designs in Figma, refine UI/UX using your design system, approve before development starts.</p>
+      <div class="rc-actions">
+        <div class="rc-act">Design agent creates directly in Figma</div>
+        <div class="rc-act">Approve, adjust, or request rework</div>
+        <div class="rc-act">AI chat focused on UI and accessibility</div>
+      </div>
+    </div>
+    <div class="rc">
+      <div class="rc-head"><div class="rc-dot" style="background:#fbbf24"></div><h3>Tester / QA</h3><div class="rc-tag" style="background:rgba(251,191,36,.1);color:#fbbf24">Quality</div></div>
+      <p>Run QA sessions, log issues by severity, approve or reject features from a business perspective — not code quality.</p>
+      <div class="rc-actions">
+        <div class="rc-act">Structured QA sessions with issue tracking</div>
+        <div class="rc-act">Pass/Fail with automatic status updates</div>
+        <div class="rc-act">AI chat focused on test strategies and edge cases</div>
+      </div>
+    </div>
+    <div class="rc">
+      <div class="rc-head"><div class="rc-dot" style="background:#60a5fa"></div><h3>Release Manager</h3><div class="rc-tag" style="background:rgba(96,165,250,.1);color:#60a5fa">Operations</div></div>
+      <p>Bundle approved specs into releases, plan deploy timing, check dependencies, trigger CI/CD — or mark manual deploys.</p>
+      <div class="rc-actions">
+        <div class="rc-act">Release board with all approved specs</div>
+        <div class="rc-act">Deploy via AllHats or mark manual</div>
+        <div class="rc-act">AI chat focused on deployment and rollback</div>
       </div>
     </div>
   </div>
